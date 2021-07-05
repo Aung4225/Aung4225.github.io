@@ -2,6 +2,65 @@
 <html>
     <head>
         <title>Home</title>
+        <style type="text/css">
+		
+            .main {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                margin: 200px auto;
+                border: 1px ;
+                transition: 2s;
+                animation-name: rotateSquare;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            .main:hover {
+                transform: rotate(360deg);
+            }
+            .box {
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                border-radius: 50%;
+        
+            }
+        
+            .green {
+                top: 0;
+                left: 0;
+                background: green;
+            }
+            .blue {
+                top: 0;
+                right: 0;
+                background:blue ;
+        
+            }
+            .indigo {
+                bottom: 0;
+                right: 0;
+                background: indigo;
+            }
+        
+            .purple {
+                bottom: 0;
+                left: 0;
+                background: purple;
+            }
+        
+            @keyframes rotateSquare {
+                from {
+                    transform: rotate(0deg) scale(1);
+                }
+                to {
+                    transform: rotate(360deg) scale(0.5);
+                }
+            </style>
+
+    </head>
+
         <body>
             <a href="index.html" >Home</a> |
                 <a href="about.html" >About</a> |
@@ -9,7 +68,12 @@
                 <a href="products.html" >Products</a> |
                 <a href="../index.html">Main Menu</a>
             <h1>This is Home Page</h1>
-            
+            <div class="main">
+		<div class="box green"></div>
+		<div class="box blue"></div>
+		<div class="box indigo"></div>
+		<div class="box purple"></div>
+	</div>
                
 
             
@@ -20,5 +84,5 @@
 
 
         </body>
-    </head>
+    
 </html>
